@@ -21,6 +21,12 @@
     --hover-color: rgba(0, 0, 0, 0.1);
     --switch-dark-mode: url(./assets/sun-icon.svg);
 }
+
+html{
+    height: 100%;
+    background: var(--background) no-repeat top center /cover;
+}
+
 body * {
     font-family: "Inter", sans-serif;
     color: var(--text-color);
