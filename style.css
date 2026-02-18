@@ -6,7 +6,7 @@
 
 :root {
     --text-color: white;
-    --background-mobile: url(./assets/bg-mobile.jpg) no-repeat top center /cover;
+    --background: url(./assets/bg-mobile.jpg);
     --border-color: rgba(255, 255, 255, 0.5);
     --background-menu: rgba(255, 255, 255, 0.1);
     --hover-color: rgba(255, 255, 255, 0.2);
@@ -15,7 +15,7 @@
 
 .light {
     --text-color: black;
-    --background-mobile: url(./assets/bg-mobile-light.jpg) no-repeat top center /cover;
+    --background: url(./assets/bg-mobile-light.jpg);
     --border-color: rgba(0, 0, 0, 0.5);
     --background-menu: rgba(0, 0, 0, 0.05);
     --hover-color: rgba(0, 0, 0, 0.1);
@@ -27,7 +27,9 @@ body * {
 }
 body {
     /*Cover -> Cobre totalmente o body, podendo ser contain também */
-    background: var(--background-mobile);
+    background: var(--background) no-repeat top center /cover;
+    height: 100vh;
+    min-width: 350px;
 }
 
 #container {
@@ -167,4 +169,15 @@ footer{
     padding:24px;
     font-size: 14px;
     border-top: 1px solid transparent;
+}
+
+@media (min-width: 700px) {
+    
+    :root {
+        --background: url(./assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --background: url(./assets/bg-desktop-light.jpg);
+    }
 }
