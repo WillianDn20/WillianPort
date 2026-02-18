@@ -78,6 +78,12 @@ body {
     background: white var(--switch-dark-mode) no-repeat center;
     border: 0;
     border-radius: 50%;
+
+    animation: slideBackbt 0.4s;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--hover-color);
 }
 
 #switch span{
@@ -90,9 +96,10 @@ body {
     backdrop-filter: blur(4px);
 }
 
+
+
 .light #switch button {
-    right: -1px ;
-    left: initial;
+    animation: slidebt 0.4s forwards;
 }
 
 #profile img{
@@ -181,5 +188,23 @@ footer{
 
     .light {
         --background: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+@keyframes slidebt {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slideBackbt {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }
